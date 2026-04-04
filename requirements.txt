@@ -1,5 +1,5 @@
-Flask==2.3.3
-numpy==1.26.4
-matplotlib==3.8.1
-python-dotenv==1.0.1
-groq==0.3.8
+Flask
+numpy
+matplotlib
+python-dotenv
+groq
