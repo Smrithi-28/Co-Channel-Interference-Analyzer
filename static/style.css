@@ -1,74 +1,118 @@
+/* General Body – now using panel color as background */
 body {
     font-family: Arial, sans-serif;
-    background: #eef2f7;
+    background: linear-gradient(145deg, #061006, #0d2010);  /* Previously panel color */
     margin: 0;
+    color: #c8f0c8;       /* Soft light green text */
 }
 
+/* Main Container */
 .container {
     display: flex;
-    gap: 20px;
-    padding: 30px;
+    gap: 25px;
+    padding: 40px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Cards – now using original background color */
 .card {
-    background: white;
+    background-color: #0b1a0b; /* Original background swapped here */
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
     flex: 1 1 400px;
     max-width: 500px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.85);
+}
+
+/* Headings */
 h1, h2 {
-    color: #2c3e50;
+    color: #c8f0c8; /* Light green */
+    margin-bottom: 15px;
 }
 
+/* Labels */
 label {
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #99e699; /* Soft green */
 }
 
+/* Inputs and Selects */
 select, input[type="text"] {
     width: 100%;
     padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: 1px solid #2a6b2a;
     margin-bottom: 10px;
-    box-sizing: border-box;
+    background-color: #0f2a0f; /* Inputs remain dark green */
+    color: #c8f0c8;
 }
 
+select option {
+    background-color: #0f2a0f;
+    color: #c8f0c8;
+}
+
+/* Buttons – Dark Green */
 button {
-    background: #3498db;
+    background: #006600; /* Dark green button */
     color: white;
     padding: 12px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
     margin-top: 10px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background: #2980b9;
+    background: #004d00; /* Darker green on hover */
+    transform: scale(1.03);
 }
 
+/* Results Box */
 .result {
-    background: #f9fafe;
+    background-color: #0b1a0b; /* Same as card */
     padding: 15px;
     margin-top: 15px;
-    border-radius: 8px;
+    border-radius: 12px;
+    border: 1px solid #006600;
 }
 
+/* Main Heading */
 .main-heading {
-    font-size: 32px;           /* Bigger size */
-    color: #2c3e50;            /* Dark blue */
-    text-align: center;         /* Centered */
-    margin-bottom: 25px;       /* Space below */
-    font-weight: 700;           /* Bold */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.2); /* Soft shadow */
+    font-size: 36px;
+    color: #99e699; /* Bright green heading */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* Images */
+img {
+    border-radius: 12px;
+    border: 2px solid #006600;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+}
+
+/* Links */
+a {
+    color: #33cc33;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
